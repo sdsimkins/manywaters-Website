@@ -1,0 +1,269 @@
+body {
+    background-attachment: fixed; 
+    background-image: url(images/headercopy.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 0;
+    padding: 0 0;
+    font-family: georgia;
+}
+
+@font-face {
+    font-family: sunflower;
+    src: url(SUNFLOWER.ttf)
+}
+
+div {
+    padding: 50px;
+}
+
+ul {
+    display: inline block;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+li {
+    display: inline-block;
+    margin: 3rem;
+}
+
+
+
+.containter {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header" 
+    "links links links links"
+    "bio1 bio1 bio2 bio2"
+    "bio1 bio1 bio2 bio2"
+    "contact contact contact contact";
+}
+
+.index1 {
+    grid-area: header;
+    min-height: 100vh;
+}
+
+.index1 h1 {
+    animation-name: fade;
+    animation-duration: 3s;
+    color: white;
+    font-family: sunflower;
+    font-size: 6vw;
+    letter-spacing: .5rem;
+    padding-top:15%;
+    text-align: center;
+}
+
+@keyframes fade {
+    from {opacity: 0%}
+    to {opacity: 100%}
+}
+
+.index2 {
+    background-attachment: scroll;
+    background-image: url(images/bio.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: bio1;
+    margin: 0 4rem;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.index2 div {
+    background-color: rgb(85, 85, 85);
+}
+.index2 p{
+    font-size: 1vw;
+}
+
+.index3 {
+    background-color: rgb(54, 54, 54);
+    color: white;
+    grid-area: bio2;
+    margin-right: 5rem;
+    min-height: 60vh;
+}
+
+
+.index4 {
+    font-size: 2.3vw;
+    grid-area: links;
+    min-height: 70vh;
+    text-align: center;
+}
+.index4 a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.index5 {
+    font-size: 1.75vw;
+    grid-area: contact;
+    margin: 5rem 0;
+    min-height: 50vh;
+    text-align: center;
+}
+
+.index5 a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.index5 h2 {
+    color:white;
+    font-family: sunflower;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    margin-bottom: 5rem;
+}
+
+a:hover {
+    color: rgb(218, 218, 218);
+    border: 2px solid rgb(218, 218, 218);
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+body {
+    background-attachment: scroll;
+    background-image: url(images/header2.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.containter {   
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header" 
+    "links links"
+    "bio1 bio1"
+    "bio2 bio2"
+    "contact contact";
+}
+.index1 {
+        grid-area: header;
+        min-height: 80vh;
+    }
+    
+    .index1 h1 {
+        color: white;
+        font-family: sunflower;
+        font-size: 7vw;
+        letter-spacing: .5rem;
+        padding-top:50%;
+        text-align: center;
+    }
+    .index2 {
+        background-attachment: scroll;
+        background-image: url(images/bio.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: bio1;
+        margin: 0 2rem;
+        min-height: 60vh;
+        padding: 2rem;
+    }
+    
+    .index2 div {
+        background-color: rgb(85, 85, 85);
+    }
+    .index2 p{
+        font-size: 1vw;
+    }
+    
+    .index3 {
+        background-color: rgb(54, 54, 54);
+        color: white;
+        grid-area: bio2;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 4rem;
+        min-height: 40vh;
+        padding: 2rem;
+    }
+    
+    .index3 h2 {
+        text-align: center;
+    }
+    
+    .index3 p {
+        font-size: 3vw;
+        word-spacing: 1px;
+        line-height: 1.5rem;
+    }
+    .index4 {
+        font-size: 5vw;
+        grid-area: links;
+        min-height: 70vh;
+        margin-right: 0;
+        padding: 0;
+        place-items: center;
+        text-align: center;
+        word-spacing: 8rem;
+    }
+    .index4 a {
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 10px;
+    }
+    
+    .index5 {
+        font-size: 1.60vw;
+        grid-area: contact;
+        margin: 5rem 0;
+        min-height: 50vh;
+        text-align: center;
+    }
+    
+    .index5 a {
+        color: white;
+        font-size: 4.2vw;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 10px;
+    }
+    
+    .index5 h2 {
+        color:white;
+        font-family: sunflower;
+        font-size: 2.75rem;
+        letter-spacing: .5rem;
+        margin-bottom: 5rem;
+    }
+    
+    a:hover {
+        color: rgb(218, 218, 218);
+        border: 2px solid rgb(218, 218, 218);
+    }
+}
+
+
+    
